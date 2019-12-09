@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListaCarneActivity"
+    android:background="@drawable/fondo">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="158dp"
+        android:layout_height="184dp"
+        android:layout_marginStart="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/chuleta"
+        tools:layout_editor_absoluteY="33dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="158dp"
+        android:layout_height="184dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:srcCompat="@drawable/costilla"
+        tools:layout_editor_absoluteY="33dp" />
+
+    <Spinner
+        android:id="@+id/spinnerchuleta"
+        android:layout_width="58dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/cantidadchuleta"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        android:background="@drawable/boton_redondo2"/>
+
+    <TextView
+        android:id="@+id/cantidadchuleta"
+        android:layout_width="92dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:text="Cantidad Libras"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        android:background="@drawable/boton_redondo2"/>
+
+    <Spinner
+        android:id="@+id/spinnercostilla"
+        android:layout_width="58dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/cantidadcostilla"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        android:background="@drawable/boton_redondo2"/>
+
+    <TextView
+        android:id="@+id/cantidadcostilla"
+        android:layout_width="92dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="Cantidad Libras"
+        app:layout_constraintStart_toEndOf="@+id/spinnerchuleta"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        android:background="@drawable/boton_redondo2"/>
+
+    <Button
+        android:id="@+id/añadirchuleta"
+        android:layout_width="146dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="28dp"
+        android:background="@drawable/boton_redondo"
+        android:text="Añadir"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cantidadchuleta"
+        android:onClick="añadirchuleta"/>
+
+    <Button
+        android:id="@+id/añadircostilla"
+        android:layout_width="146dp"
+        android:layout_height="47dp"
+        android:background="@drawable/boton_redondo"
+        android:text="Añadir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.637"
+        app:layout_constraintStart_toEndOf="@+id/añadirchuleta"
+        app:layout_constraintTop_toBottomOf="@+id/cantidadcostilla"
+        android:onClick="añadircostilla"/>
+
+    <Button
+        android:id="@+id/carritodecompras"
+        android:layout_width="313dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="116dp"
+        android:background="@drawable/boton_redondo"
+        android:text="Carrito de compras"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="carrito"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
